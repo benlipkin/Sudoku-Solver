@@ -10,7 +10,7 @@ class sudoku():
                     return 0
         return 1
 
-    def next(self):
+    def tile(self):
         for i in range(9):
             for j in range(9):
                 if not self.m[i][j]:
@@ -34,7 +34,7 @@ class sudoku():
     def solve(self):
         if self.full():
             return 1
-        i,j=self.next()
+        i,j=self.tile()
         for k in range(1,10):
             if self.safe(i,j,k):
                 self.m[i][j]=k
