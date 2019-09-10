@@ -17,16 +17,16 @@ class sudoku():
                     return i,j
 
     def safe(self,i,j,k):
-        for c in range(9):
-            if self.m[i][c]==k:
+        for jj in range(9):
+            if self.m[i][jj]==k:
                 return 0
-        for r in range(9):
-            if self.m[r][j]==k:
+        for ii in range(9):
+            if self.m[ii][j]==k:
                 return 0
-        si=(i//3)*3
-        sj=(j//3)*3
-        for i in range(si,si+3):
-            for j in range(sj,sj+3):
+        ii=(i//3)*3
+        jj=(j//3)*3
+        for i in range(ii,ii+3):
+            for j in range(jj,jj+3):
                 if self.m[i][j]==k:
                     return 0
         return 1
