@@ -23,8 +23,8 @@ class sudoku():
         for ii in range(9):
             if self.m[ii][j]==k:
                 return 0
-        ii=(i//3)*3
-        jj=(j//3)*3
+        ii=3*(i//3)
+        jj=3*(j//3)
         for i in range(ii,ii+3):
             for j in range(jj,jj+3):
                 if self.m[i][j]==k:
