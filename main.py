@@ -8,11 +8,7 @@ def core():
     if s.solve():
         g.pushoutput(s)
 
-def main():
-    global g
+if __name__=='__main__':
     g=gui(core)
     g.format()
     mainloop()
-
-if __name__=='__main__':
-    main()
